@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+input, button {
+    font-size: 16px;
+}
+
+body {
+    max-width: 800px;
+    width: 80%;
+    margin: 0 auto;
+    background-image: url('assets/cloudy-pattern.webp');
+}
+
+header {
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    margin-bottom: 5%;
+}
+
+#searchBook {
+    padding: 10px;
+    margin-left: 20%;
+}
+
+#searchBookTitle {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(201, 201, 201);
+}
+
+#searchSubmit {
+    background: rgb(223, 223, 223);
+    border-radius: 5px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 1);
+}
+
+#searchSubmit img {
+    width: 14%;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+#searchModalContentBox {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.8px);
+    -webkit-backdrop-filter: blur(3.8px);
+    margin: 9% auto;
+    padding: 20px;
+    width: 80%;
+}
+
+#searchModalContent article {
+    margin-bottom: 5%;
+    padding: 2%;
+    background: rgba(237, 237, 237, 0.9);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.8px);
+    -webkit-backdrop-filter: blur(3.8px);
+}
+
+#searchModalClose {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.modalTitle {
+    margin-left: 5%;
+    margin-bottom: 2%;
+}
+
+#searchModalClose:hover, #searchModalClose:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#dialogModalContent {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.8px);
+    -webkit-backdrop-filter: blur(3.8px);
+    margin: 20% auto;
+    padding: 20px;
+    width: 45%;
+    display: flex;
+    align-items: center;
+}
+
+#inputSection {
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 13px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.8px);
+    -webkit-backdrop-filter: blur(3.8px);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 16px;
+    margin-bottom: 5%;
+}
+
+#inputSection h2 {
+    text-align: center;
+}
+
+#inputSection form .input {
+    margin: 8px 0;
+}
+
+#inputSection form #bookSubmit {
+    background-color: white;
+    border: 0;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    padding: 8px;
+    cursor: pointer;
+}
+
+#inputSection form #bookSubmit span {
+    font-weight: bold;
+}
+
+#inputSection form .input input {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+
+#inputSection form .input label {
+    color: black;
+    font-weight: bold;
+}
+
+#inputSection form #inputCheckbox {
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+}
+
+#inputSection form #inputCheckbox label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.bookShelf{
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 13px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.8px);
+    -webkit-backdrop-filter: blur(3.8px);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 16px;
+    margin-bottom: 5%;
+}
+
+.red {
+    background: rgba(255, 0, 0, 0.72);
+    border-radius: 5px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.8px);
+    -webkit-backdrop-filter: blur(3.8px);
+    padding: 4px;
+    margin: 4px;
+}
+
+.green {
+    background: rgba(46, 248, 50, 0.72);
+    border-radius: 5px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.8px);
+    -webkit-backdrop-filter: blur(3.8px);
+    padding: 4px;
+}

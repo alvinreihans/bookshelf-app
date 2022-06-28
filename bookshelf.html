@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bookshelf Apps</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Bookshelf Apps</h1>
+        <p></p>
+        <form id="searchBook">
+            <input id="searchBookTitle" placeholder="Search book by title" type="text">
+            <button id="searchSubmit" type="submit"><img src="assets/icons8-search-100.png"></button>
+        </form>
+    </header>
+    <main>
+        <section id="inputSection">
+            <h2>Add new book</h2>
+            <form id="inputBook">
+                <div class="input">
+                    <label for="inputBookTitle">Title</label>
+                    <input id="inputBookTitle" type="text" required>
+                </div>
+                <div class="input">
+                    <label for="inputBookAuthor">Author</label>
+                    <input id="inputBookAuthor" type="text" required>
+                </div>
+                <div class="input">
+                    <label for="inputBookYear">Year</label>
+                    <input id="inputBookYear" type="number" required>
+                </div>
+                <div id="inputCheckbox">
+                    <label for="inputBookIsComplete">Readed</label>
+                    <input id="inputBookIsComplete" type="checkbox">
+                </div>
+                <button id="bookSubmit" value="Submit" name="Submit" type="submit">Put books on the <span id="statusDesc">unfinished</span> shelf</button>
+            </form>
+        </section>
+
+        <div id="searchModal" class="modal">
+            <div id="searchModalContentBox">
+                <span id="searchModalClose">&times;</span>
+                <div id="searchModalContent">
+                    <h2 class="modalTitle">Unfinished book</h2>
+                    <div id="incompleteBookshelfListInModal">
+                    </div>
+                    <h2 class="modalTitle">Readed book</h2>
+                    <div id="completedBookshelfListInModal">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="dialogModal" class="modal">
+                <div id="dialogModalContent">
+                </div>
+        </div>
+        
+        <section class="bookShelf">
+            <h2>Unfinished book</h2>
+            <div id="incompleteBookshelfList">
+            </div>
+        </section>
+        
+        <section class="bookShelf">
+            <h2>Readed book</h2>
+            <div id="completedBookshelfList">
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
